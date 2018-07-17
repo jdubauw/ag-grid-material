@@ -6,11 +6,14 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 // material components
-import {MdIconModule, MdButtonModule, MdCheckboxModule, MdInputModule, MdToolbarModule, MdCardModule, MdSelectModule, MdDatepickerModule, MdNativeDateModule} from '@angular/material';
-
-import {AgGridModule} from "ag-grid-angular/main";
+import { MatDatepickerModule } from '@angular/material/datepicker'
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule, MatInputModule, MatNativeDateModule } from '@angular/material';
+import { MatSelectModule } from '@angular/material/select';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { AgGridModule } from "ag-grid-angular/main";
 import { AgGridMaterialTextEditorComponent } from './ag-grid-material-text-editor/ag-grid-material-text-editor.component';
 import { AgGridMaterialSelectEditorComponent } from './ag-grid-material-select-editor/ag-grid-material-select-editor.component';
 import { AgGridMaterialCheckboxCellComponent } from './ag-grid-material-checkbox-cell/ag-grid-material-checkbox-cell.component';
@@ -29,23 +32,35 @@ import { AgGridMaterialDatepickerEditorComponent } from './ag-grid-material-date
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MdButtonModule, 
-    MdCheckboxModule,
-    MdIconModule,
-    MdInputModule,
-    MdToolbarModule,
-    MdCardModule,
-    MdSelectModule,
-    MdDatepickerModule,
-    MdNativeDateModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatToolbarModule,
     AgGridModule.withComponents([
-        AgGridMaterialTextEditorComponent,
-        AgGridMaterialSelectEditorComponent,
-        AgGridMaterialCheckboxCellComponent,
-        AgGridMaterialDatepickerEditorComponent
+      AgGridMaterialTextEditorComponent,
+      AgGridMaterialSelectEditorComponent,
+      AgGridMaterialCheckboxCellComponent,
+      AgGridMaterialDatepickerEditorComponent
     ])
   ],
-  providers: [],
+  exports: [
+    MatCardModule,
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatToolbarModule
+  ],
+  providers: [
+    MatDatepickerModule
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

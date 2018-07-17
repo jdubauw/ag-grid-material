@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { IAfterGuiAttachedParams, ICellEditorParams } from "ag-grid/main";
 import { AgEditorComponent, } from "ag-grid-angular";
-import { MdSelect } from "@angular/material";
+import { MatSelect } from "@angular/material";
 
 @Component({
   selector: 'app-ag-grid-material-select-editor',
@@ -12,8 +12,8 @@ export class AgGridMaterialSelectEditorComponent implements OnInit, AgEditorComp
     columnWidth: string;
     values: [ string ];
     params: ICellEditorParams;
-    private value: string;
-    @ViewChild('select', {read: MdSelect}) select: MdSelect;
+    public value: string;
+    @ViewChild('select', {read: MatSelect}) select: MatSelect;
 
     constructor() { }
 

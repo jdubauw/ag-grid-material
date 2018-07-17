@@ -1,7 +1,7 @@
-import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
-import { IAfterGuiAttachedParams, ICellEditorParams } from "ag-grid/main";
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ICellEditorParams } from "ag-grid/main";
 import { AgEditorComponent, } from "ag-grid-angular";
-import { MdInput } from "@angular/material";
+import { MatInput } from "@angular/material";
 
 @Component({
   selector: 'app-ag-grid-material-text-editor',
@@ -10,8 +10,8 @@ import { MdInput } from "@angular/material";
 })
 export class AgGridMaterialTextEditorComponent implements OnInit, AgEditorComponent {
     params: ICellEditorParams;
-    private value: string;
-    @ViewChild('input', {read: MdInput}) input;
+    public value: string;
+    @ViewChild('input', {read: MatInput}) input;
 
     constructor() { }
 
@@ -38,7 +38,7 @@ export class AgGridMaterialTextEditorComponent implements OnInit, AgEditorCompon
     }
 
     focusOut(): void {
-        // 
+        //
     }
 
     agInit(params: ICellEditorParams): void {

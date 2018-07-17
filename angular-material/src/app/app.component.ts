@@ -51,7 +51,8 @@ export class AppComponent {
                 field: "madeOn", 
                 editable: true, 
                 cellEditorFramework: AgGridMaterialDatepickerEditorComponent,
-                valueFormatter: (data) => moment(data.value).format('L')
+                valueFormatter: (data) => moment(data.value).format('L'),
+                cellClass: "mat-form-custom"
             },
         ];
 

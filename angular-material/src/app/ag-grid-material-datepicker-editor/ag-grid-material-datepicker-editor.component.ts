@@ -17,7 +17,6 @@ import { MdDatepicker, MdDatepickerToggle } from "@angular/material";
 .mat-input-container {
     margin-top: -16px;
 }
-
       `
   ]
 })

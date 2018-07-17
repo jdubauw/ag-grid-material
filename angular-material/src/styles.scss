@@ -40,3 +40,20 @@ body, html {
     width: 80%;
     margin: 24px;
 }
+
+.mat-form-custom {
+    &.ag-cell-inline-editing {
+        padding-top: 8px;
+        padding-right: 0;
+        padding-bottom: 8px;
+        padding-left: 8px;
+        height: 40px;
+    }
+    .mat-form-field {
+        width: 180px;
+    }
+}
+
+app-ag-grid-material-datepicker-editor {
+    
+}
